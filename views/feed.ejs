@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+<div class="h-full w-full bg-zinc-600 px-10 py-8 text-white">
+    <div class="cards flex flex-wrap gap-10 ">
+        <% allpost.forEach(function(elem) { %>
+            <div class="w-60 card">
+                <div class="overflow-hidden w-full h-52 bg-sky-200 rounded-lg">
+                    <img class="w-full h-full object-cover object-center" src="/images/uploads/<%= elem.image %>" alt="">
+                </div>
+               <h4 class="w-60 text-sm uppercase  "><%= elem.title %></h4>
+               <h4 class="w-60 text-sm uppercase"><%= elem.description %></h4>
+              
+            </div> 
+        <% }) %>        
+    
+    </div>
+</div>
+<% include ./partials/footer.ejs %>
+

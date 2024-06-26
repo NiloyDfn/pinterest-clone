@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+
+<% user.posts.forEach(function(elem) { %>
+    <div class="w-60 card">
+        <div class="overflow-hidden w-full h-52 bg-sky-200 rounded-lg">
+            <img class="w-full h-full object-cover object-center" src="/images/uploads/<%= elem.image %>" alt="">
+        </div>
+       <h4 class="w-60 text-sm uppercase  "><%= elem.title %></h4>
+       <h4 class="w-60 text-sm uppercase"><%= elem.description %></h4>
+       
+      
+    </div> 
+<% }) %>     
+
+<% include ./partials/footer.ejs %>
+
+
+   
