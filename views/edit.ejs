@@ -1,7 +1,7 @@
 <% include ./partials/header.ejs %>
 
 <form hidden id="fileform" method="post" enctype="multipart/form-data" action="/fileupload">
-  <input id="file" type="file" name="image">
+  <input id="file" type="file" name="pimage">
 </form>
 
 <div class="w-full min-h-screen bg-zinc-900 text-white py-5">
@@ -12,7 +12,7 @@
     </div>
     <div class="flex flex-col items-center gap-2 mt-20">
       <div class="image w-20 h-20 bg-sky-100 rounded-full overflow-hidden">
-        <img class="w-full h-full object-cover imo" src="/images/uploads/<%= user.picture %>" alt="">
+        <img class="w-full h-full object-cover imo" src="/images/uploads/<%= user.profileImage %>" alt="">
       </div>
       <button id="editbtn" class="text-blue-500 capitalize">edit picture</button>
     </div>
